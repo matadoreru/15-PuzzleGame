@@ -1,0 +1,30 @@
+﻿<Window x:Class="Puzzle.wndJugar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Puzzle"
+        mc:Ignorable="d"
+        Title="Jugar" Height="450" Width="800" PreviewKeyDown="Window_PreviewKeyDown">
+    <DockPanel x:Name="dockPanel">
+        
+        
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>Temps transcorregut:</StatusBarItem>
+            <StatusBarItem>
+                <TextBlock x:Name="sbItemRellotge1" Text="00:00:00"/>
+            </StatusBarItem>
+            <StatusBarItem HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal">
+                    <StatusBarItem>Completado:</StatusBarItem>
+                    <StatusBarItem>
+                        <TextBlock x:Name="porcentajeCompletado" Text="%"/>
+                    </StatusBarItem>
+                    <StatusBarItem>
+                        <TextBlock x:Name="numeroCompletado" Text="n~"/>
+                    </StatusBarItem>
+                </StackPanel>
+            </StatusBarItem>
+        </StatusBar>
+    </DockPanel>
+</Window>
