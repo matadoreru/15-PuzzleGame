@@ -143,8 +143,8 @@ namespace Puzzle
             rellotgeEnces = true;
             #endregion
 
-            numeroCompletado.Text = myGrid.NCompletats + "/" + Convert.ToInt32(nCol * nFila);
-            porcentajeComp = Math.Round((myGrid.NCompletats / Convert.ToDouble(nCol * nFila)) * 100,2);
+            numeroCompletado.Text = myGrid.NCompletats + "/" + (Convert.ToInt32(nCol * nFila) - 1);
+            porcentajeComp = Math.Round((myGrid.NCompletats / (Convert.ToDouble(nCol * nFila))) * 100,2);
             porcentajeCompletado.Text = porcentajeComp + " %";
         }
 
@@ -219,8 +219,8 @@ namespace Puzzle
                 {
                     btnClick.Background = pinzellIncorrecte;
                 }
-                numeroCompletado.Text = myGrid.NCompletats + "/" + Convert.ToInt32(nCol * nFila);
-                porcentajeComp = Math.Round((myGrid.NCompletats / Convert.ToDouble(nCol * nFila)) * 100, 2);
+                numeroCompletado.Text = myGrid.NCompletats + "/" + (Convert.ToInt32(nCol * nFila) - 1);
+                porcentajeComp = Math.Round((myGrid.NCompletats / (Convert.ToDouble(nCol * nFila)) - 1) * 100, 2);
                 porcentajeCompletado.Text = porcentajeComp + " %";
             }
         }
@@ -291,8 +291,8 @@ namespace Puzzle
                         posY++;
                         posX = 0;
                     }
-                    btn.CorrecteX = posX;
-                    btn.CorrecteY = posY;
+                    btn.CorrecteX = posY;
+                    btn.CorrecteY = posX;
                 }
                 else
                 {
